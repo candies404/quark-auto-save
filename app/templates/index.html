@@ -546,6 +546,9 @@
               newTask.savepath = this.taskDirSelected + '/TASKNAME'
             } else {
               newTask.savepath = lastTask.savepath.replace(lastTask.taskname, 'TASKNAME')
+              if(newTask.taskname){
+                newTask.savepath = newTask.savepath.replace('TASKNAME', newTask.taskname)
+              }
             }
           }
           this.formData.tasklist.push(newTask);
